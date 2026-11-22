@@ -32,7 +32,7 @@ import { getResumeHistory } from "../api/resumeApi.js";
 // ==========================================
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api/job-applications",
+  baseURL: "http://localhost:5001/api/job-applications",
   headers: {
     "Content-Type": "application/json",
   },
