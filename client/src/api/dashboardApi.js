@@ -1,7 +1,8 @@
 import axios from "axios";
+import API_BASE_URL from "./config";
 
 const API = axios.create({
-  baseURL: "http://localhost:5001/api",
+  baseURL: `${API_BASE_URL}/api`,
   headers: {
     "Content-Type": "application/json",
   },
@@ -52,11 +53,6 @@ export const getDashboardData = async () => {
 
   return {
     resumes: resumeResponse.data?.resumes || [],
-
-    // ==========================================
-    // CAREER MATCH
-    // Supports different backend response shapes
-    // ==========================================
 
     careerMatches:
       careerMatchData?.careerMatches ||

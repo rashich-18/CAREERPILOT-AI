@@ -1,15 +1,14 @@
 import axios from "axios";
+import API_BASE_URL from "./config";
 
 const API = axios.create({
-  baseURL: "http://localhost:5001/api/interview",
+  baseURL: `${API_BASE_URL}/api/interview`,
   headers: {
     "Content-Type": "application/json",
   },
 });
 
-// ==========================================
 // ATTACH JWT TOKEN TO EVERY REQUEST
-// ==========================================
 API.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem("token");
@@ -20,57 +19,27 @@ API.interceptors.request.use(
 
     return config;
   },
-  (error) => {
-    return Promise.reject(error);
-  }
+  (error) => Promise.reject(error)
 );
 
-// ==========================================
 // CREATE INTERVIEW
-// ==========================================
+export const createInterview = (data) => API.post("/", data);
 
-export const createInterview = (data) => {
-  return API.post("/", data);
-};
-
-// ==========================================
 // GET INTERVIEW HISTORY
-// ==========================================
+export const getInterviewHistory = () => API.get("/");
 
-export const getInterviewHistory = () => {
-  return API.get("/");
-};
-
-// ==========================================
 // GET SINGLE INTERVIEW
-// ==========================================
+export const getInterviewById = (id) => API.get(`/${id}`);
 
-export const getInterviewById = (id) => {
-  return API.get(`/${id}`);
-};
-
-// ==========================================
 // SUBMIT INTERVIEW ANSWER
-// ==========================================
+export const submitInterviewAnswer = (id, data) =>
+  API.patch(`/${id}/answer`, data);
 
-export const submitInterviewAnswer = (id, data) => {
-  return API.patch(`/${id}/answer`, data);
-};
-
-// ==========================================
 // COMPLETE INTERVIEW
-// ==========================================
+export const completeInterview = (id) =>
+  API.post(`/${id}/complete`);
 
-export const completeInterview = (id) => {
-  return API.post(`/${id}/complete`);
-};
-
-// ==========================================
 // DELETE INTERVIEW
-// ==========================================
-
-export const deleteInterview = (id) => {
-  return API.delete(`/${id}`);
-};
+export const deleteInterview = (id) => API.delete(`/${id}`);
 
 export default API;

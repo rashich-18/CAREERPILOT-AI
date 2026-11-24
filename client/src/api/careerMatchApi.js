@@ -1,7 +1,8 @@
 import axios from "axios";
+import API_BASE_URL from "./config";
 
 const API = axios.create({
-  baseURL: "http://localhost:5001/api/career-match",
+  baseURL: `${API_BASE_URL}/api/career-match`,
   headers: {
     "Content-Type": "application/json",
   },
@@ -17,7 +18,6 @@ API.interceptors.request.use((config) => {
 
   return config;
 });
-
 
 // ==========================================
 // CREATE CAREER MATCH
@@ -39,7 +39,6 @@ export const createCareerMatch = async ({
   return response.data;
 };
 
-
 // ==========================================
 // GET CAREER MATCH HISTORY
 // ==========================================
@@ -49,7 +48,6 @@ export const getCareerMatchHistory = async () => {
 
   return response.data;
 };
-
 
 // ==========================================
 // GET SINGLE CAREER MATCH
@@ -71,3 +69,4 @@ export const deleteCareerMatch = async (id) => {
   return response.data;
 };
 
+export default API;
