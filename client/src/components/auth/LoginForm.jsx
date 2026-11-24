@@ -113,12 +113,14 @@ const handleSubmit = async (e) => {
       {/* Forgot Password */}
       <div className="flex justify-end">
 
-        <button
-          type="button"
-          className="text-sm text-violet-300 transition hover:text-violet-100"
-        >
-          Forgot Password?
-        </button>
+        
+<button
+  type="button"
+  onClick={() => navigate("/forgot-password")}
+  className="text-sm text-violet-300 transition hover:text-violet-100"
+>
+  Forgot Password?
+</button>
 
       </div>
 

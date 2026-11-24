@@ -25,6 +25,7 @@ import InterviewRoom from "./pages/InterviewRoom";
 import InterviewReport from "./pages/InterviewReport";
 import JobApplication from "./pages/JobApplication";
 import JobApplicationResult from "./pages/JobApplicationResult";
+import ForgotPassword from "./pages/ForgotPassword";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -86,6 +87,8 @@ function AnimatedRoutes() {
         <Route path="/interview" element={<Interview />} />
         <Route path="/interview/:id" element={<InterviewRoom />} />
         <Route path="/interview/:id/report" element={<InterviewReport />}/>
+
+        <Route path="/forgot-password" element={<ForgotPassword />} />
       </Routes>
     </AnimatePresence>
   );

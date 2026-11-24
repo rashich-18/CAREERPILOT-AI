@@ -1,12 +1,22 @@
+
 import express from "express";
-import { register,login } from "../controllers/authController.js";
+
+import {
+  register,
+  login,
+  forgotPassword,
+  verifyResetOtp,
+  resetPassword,
+} from "../controllers/authController.js";
 
 const router = express.Router();
 
-// Register Route
 router.post("/register", register);
-
-// Login Route
 router.post("/login", login);
+
+// Password reset routes
+router.post("/forgot-password", forgotPassword);
+router.post("/verify-reset-otp", verifyResetOtp);
+router.post("/reset-password", resetPassword);
 
 export default router;

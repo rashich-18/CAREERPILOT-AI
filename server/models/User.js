@@ -25,7 +25,15 @@ const userSchema = new mongoose.Schema(
       required: [true, "Password is required"],
       minlength: 8,
     },
-    
+    resetPasswordOtp: {
+  type: String,
+  default: null,
+},
+resetPasswordOtpExpiry: {
+  type: Date,
+  default: null,
+},
+
     profilePicture: {
   type: String,
 },

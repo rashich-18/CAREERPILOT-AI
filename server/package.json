@@ -24,7 +24,8 @@
     "mongoose": "^9.9.1",
     "morgan": "^1.11.0",
     "multer": "^2.2.0",
-    "pdf-parse": "^2.4.5"
+    "pdf-parse": "^2.4.5",
+    "resend": "^6.39.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
