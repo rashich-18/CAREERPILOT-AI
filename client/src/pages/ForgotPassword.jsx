@@ -14,7 +14,7 @@ import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
 import AuthLayout from "../components/auth/AuthLayout";
-import AuthCard from "../components/auth/AuthCard";
+import AuthCard from "../components/auth/Authcard";
 import API from "../api/authApi";
 
 export default function ForgotPassword() {

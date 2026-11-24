@@ -1,5 +1,5 @@
 import AuthLayout from "../components/auth/AuthLayout";
-import AuthCard from "../components/auth/AuthCard";
+import AuthCard from "../components/auth/Authcard";
 import LoginForm from "../components/auth/LoginForm";
 import { motion } from "framer-motion";
 

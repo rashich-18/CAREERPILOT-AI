@@ -5,11 +5,11 @@ import toast from "react-hot-toast";
 import ProgressBar from "../components/onboarding/ProgressBar";
 import NavigationButtons from "../components/onboarding/NavigationButtons";
 
-import Step1 from "../components/onboarding/Step1";
-import Step2 from "../components/onboarding/Step2";
-import Step3 from "../components/onboarding/Step3";
-import Step4 from "../components/onboarding/Step4";
-import Step5 from "../components/onboarding/Step5";
+import Step1 from "../components/onboarding/step1";
+import Step2 from "../components/onboarding/step2";
+import Step3 from "../components/onboarding/step3";
+import Step4 from "../components/onboarding/step4";
+import Step5 from "../components/onboarding/step5";
 
 import API from "../api/onboardingApi";
 

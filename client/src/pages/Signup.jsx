@@ -1,5 +1,5 @@
 import AuthLayout from "../components/auth/AuthLayout";
-import AuthCard from "../components/auth/AuthCard";
+import AuthCard from "../components/auth/Authcard";
 import SignupForm from "../components/auth/SignupForm";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";

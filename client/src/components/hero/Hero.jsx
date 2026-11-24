@@ -1,6 +1,6 @@
 import AnimatedBackground from "../background/AnimatedBackground";
-import HeroContent from "./HeroContent";
-import DashboardPreview from "./DashboardPreview";
+import HeroContent from "./herocontent";
+import DashboardPreview from "./Dashboardpreview";
 import { motion } from "framer-motion"
 
 function Hero() {
